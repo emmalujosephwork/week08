@@ -52,11 +52,11 @@ jobs:
       - name: Azure Login
         uses: azure/login@v1
         with:
-          creds: acrwk08115443.azurecr.io
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       # Login to Azure Container Registry (ACR)
       - name: Login to Azure Container Registry
-        run: az acr login --name ${{ secrets.AZURE_CONTAINER_REGISTRY }}
+        run: az acr login --name acrwk08115443.azurecr.io
 
       - name: Inject Backend IPs into Frontend main.js
         run: |
