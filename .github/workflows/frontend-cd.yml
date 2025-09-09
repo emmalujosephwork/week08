@@ -10,19 +10,19 @@ on:
       product_api_ip:
         description: 'External IP of Product Service'
         required: true
-        default: 'http://<ip_address>:8000'
+        default: 'http://<product_ip>:80'
       order_api_ip:
-        description: 'External IP of Order Service (e.g., http://Y.Y.Y.Y:8001)'
+        description: 'External IP of Order Service'
         required: true
-        default: 'http://<ip_address>:8001'
+        default: 'http://<order_ip>:80'
       aks_cluster_name:
         description: 'Name of the AKS Cluster to deploy to'
         required: true
-        default: '<aks_name>'
+        default: 'aks-wk08-115443'
       aks_resource_group:
         description: 'Resource Group of the AKS Cluster'
         required: true
-        default: '<<resource_group_name>'
+        default: 'rg-wk08-115443'
 
   workflow_call:
     inputs:
